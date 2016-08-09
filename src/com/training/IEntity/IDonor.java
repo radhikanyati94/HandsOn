@@ -9,10 +9,10 @@ import java.util.*;
  */
 public interface IDonor {
 	
-	public boolean  addDonor(Donor obj);
-	public boolean[] addDonors(Donor... dnrList);
+	public int addDonor(Donor obj);
+	public int addDonors(Donor... dnrList);
 	public void printDonorList();
-	public List<Donor> getDonorList();
-	//public List<Project> getProjectList();
+	//public List<Donor> getDonorList();
+	public Set<DonorProject> getProjectList(long donorId);
 	
 }

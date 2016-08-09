@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import com.training.entity.*;
+import com.training.utility.DonorImpl;
 
 
 public class Application {
@@ -24,12 +25,12 @@ public class Application {
 		
 		implObj.addDonors(donor1,donor2,donor3);
 		
-		List<Donor> donorList = implObj.getDonorList();
+		/*List<Donor> donorList = implObj.printDonorList();
 		
 		for(Donor obj: donorList)
 		{
 			System.out.println(obj);
-		}
+		}*/
 		
 		List <String> nameList = new ArrayList<String>();
 		nameList.add(new String("Zahir"));
@@ -40,7 +41,7 @@ public class Application {
 		Collections.sort(nameList);
 		System.out.println(nameList);
 		
-		Collections.sort(donorList);
+		//Collections.sort(donorList);
 		System.out.println("sort by phone number");
 		implObj.printDonorList();
 				

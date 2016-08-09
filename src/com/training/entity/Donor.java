@@ -2,7 +2,7 @@ package com.training.entity;
 
 import com.training.entity.*;
 	
-	public class Donor implements Comparable<Donor>{
+	public class Donor {
 		
 
 		private long donorCode;
@@ -12,6 +12,14 @@ import com.training.entity.*;
 		private double amountDonated;
 		
 		
+		public Donor(long donorCode, String donorName, long handPhone, String email) {
+			super();
+			this.donorCode = donorCode;
+			this.donorName = donorName;
+			this.handPhone = handPhone;
+			this.email = email;
+		}
+
 		public Donor() {
 			super();
 		}
@@ -29,7 +37,7 @@ import com.training.entity.*;
 			return donorCode;
 		}
 
-		public void setDonorCode(long donorCode) {
+		public void setDonorCode(int donorCode) {
 			this.donorCode = donorCode;
 		}
 
@@ -69,20 +77,12 @@ import com.training.entity.*;
 		public String toString() {
 			StringBuffer buffer = new StringBuffer();
 			
-			buffer = buffer.append(donorCode).append(".").append(donorName).append(".").append(handPhone).append(".").append(email).append(".").append(amountDonated);
+			buffer = buffer.append("Dono Id: ").append(donorCode).append("\tDonor Name: ").append(donorName).append("\tHandPhone: ").append(handPhone).append("\tEmail: ").append(email).append("\n");
 			
 			return buffer.toString();
 		}
 		
 
-		@Override
-		public int compareTo(Donor obj) {
-			
-			if(this.handPhone>obj.handPhone) return 1;
-			if(this.handPhone<obj.handPhone) return -1;
-			
-			return 0;
-		}
 		
 		
 
